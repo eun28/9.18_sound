@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>play</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+	<style type="text/css">
+		@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%; /* html과 body의 height를 100%로 설정 */
+			background: black;
+		}
+		body,h1,h2,h3,p,ul,li{margin: 0px;padding: 0px}
+		h1{color: white; font-family: "Bebas Neue", sans-serif; font-size:12rem; text-align: center; line-height: 1.0; padding-top: 10px; cursor: pointer;}
+.container {
+			position: relative; /* 자식 요소의 절대 위치를 기준으로 설정 */
+			width: 100%;
+			height: calc(100% - 100px); /* 제목 높이 제외 */
+		}
+
+		.g11, .b1, .fb1, .ba1, .d1 {
+			position: absolute; cursor: pointer;
+		}
+		
+		.g11 { top: 10%; left: 0%; width: 30%; z-index: 2;
+		filter: grayscale(100%) brightness(50%);
+			transition: filter 0.3s ease;}
+		.g11:hover {
+			filter: grayscale(0%) brightness(100%);}
+		.b1 { top: 20%; left: 10%; width: 40%; z-index: 3;
+			filter: grayscale(100%) brightness(50%);
+			transition: filter 0.3s ease;}
+		.b1:hover {
+			filter: grayscale(0%) brightness(100%);}
+
+		.fb1 { top: 15%; left: 40%; width: 100%; z-index: 4;
+		filter: grayscale(100%) brightness(50%);
+			transition: filter 0.3s ease;}
+		.fb1:hover {
+			filter: grayscale(0%) brightness(100%);}
+		.ba1 { top: 30%; left: 55%; width: 18%; z-index: 5; trtransform: rotate(30deg);
+		filter: grayscale(100%) brightness(50%);
+			transition: filter 0.3s ease;}
+		.ba1:hover {
+			filter: grayscale(0%) brightness(100%);}
+		.d1 { top: 15%; left: 68%; width: 30%; z-index: 0;
+		filter: grayscale(100%) brightness(50%);
+			transition: filter 0.3s ease;}
+		.d1:hover {
+			filter: grayscale(0%) brightness(100%);}
+
+		.p1{font-family: 'Pretendard-Bold';color: white; font-size:0.9rem; line-height: 1.3; padding-bottom: 10px}
+		.p2{font-family: 'Pretendard-Bold';color: white; font-size:0.9rem; line-height: 1.3;}
+
+		.container2 {
+			display: flex; /* Flexbox 사용 */
+			justify-content: space-between; /* 좌우로 공간을 분배 */
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+		}
+		.container2 div {
+			flex: 1; /* 각 div가 동일한 너비를 가지도록 설정 */
+			margin: 0 10px; /* div 간의 간격 설정 */
+		}
+		.p1, .p2 .p3{
+			margin: 0;
+		}
+
+		.p3 {font-family: 'Pretendard-Bold';color: white; font-size:0.9rem; line-height: 1.3; position: relative;
+    top: -10%;
+    z-index: 1; padding-left: 20px;
+		}
+
+		.fb1-hover {
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 */
+    top: 15%;
+    left: 40%;
+    width: 100%;
+    z-index: 5; /* fb1보다 위에 표시 */
+    opacity: 0; /* 기본적으로 숨김 */
+    transition: opacity 0.3s ease;
+}
+
+.fb1-container:hover .fb1-hover {
+    opacity: 1; /* 호버 시 새 이미지 보이기 */
+}
+
+.fb1-container {
+    position: relative; /* 자식 요소의 절대 위치를 기준으로 설정 */
+    top: 15%;
+    left: 33%;
+    width: 18%;
+}
+
+	</style>
+</head>
+<body>
+	<h1 id="playButton5" alt="playButton5">DON'T LOOK BACK IN ANGER</h1>
+	<div class="container2">
+	<div>
+	<p class="p1">악기 각각의 소리를 즐겨보세요.<br>타이틀을 누르면 모든 소리가 흘러 나옵니다.</p>
+	<p class="p2">Enjoy the sounds of each instrument.<br>Press the title to let all the sounds flow.</p>
+	</div>
+	<div>
+	<p class="p1">왜 노래를 부르고 있는 사람을 눌렀을 때 소리가 나오지 않나요?<br>Don't look back in anger는 노엘 갤러거가 최초로 보컬을 맡은 곡입니다. 그는 왼쪽에서 두 번째 남자입니다.</p>
+	<p class="p2">Why doesn't the sound come out when I press the person who is singing?<br>Don't Look Back With Anger is Noel Gallagher's first vocalized song. He is the second man from the left.</p>
+	</div>
+	</div>
+	<div class="container">
+	<img src="g1.png" class="g11" id="playButton2" alt="Play Button2">
+	<img src="b1.png" class="b1" id="playButton1" alt="Play Button1">
+	<div class="fb1-container">
+	<img src="fb1.png" class="fb1" alt="FB1">
+	<img src="ht.png" class="fb1-hover" alt="FB1 Hover">
+</div>
+	<img src="ba1.png" class="ba1" id="playButton3" alt="Play Button3">
+	<img src="d1.png" class="d1" id="playButton4" alt="Play Button4">
+	</div>
+	<p class="p3">Song source (Youtube)<br>Oasis - Don't Look Back In Anger - Vocals Only(explodingsausage)<br>Oasis - Don't Look Back In Anger (Bass Only)(Isolated Tracks)<br>Oasis - Don't Look Back In Anger (Guitars Only)(Isolated Tracks)<br>Oasis - Don't Look Back In Anger (Drums Only)(Isolated Tracks)</p>
+<!-- 오디오 태그 추가 -->
+	<audio id="audio1" src="vocal1.mp3"></audio>
+	<audio id="audio2" src="guitar.mp3"></audio>
+	<audio id="audio3" src="bass.mp3"></audio>
+	<audio id="audio4" src="drum.mp3"></audio>
+	<audio id="audio5" src="full.mp3" ></audio>
+
+<script type="text/javascript">
+	let isPlaying = {
+		'audio1': false,
+		'audio2': false,
+		'audio3': false,
+		'audio4': false,
+		'audio5': false
+	};
+
+	const playButton1 = document.getElementById('playButton1');
+	const playButton2 = document.getElementById('playButton2');
+	const playButton3 = document.getElementById('playButton3');
+	const playButton4 = document.getElementById('playButton4');
+	const playButton5 = document.getElementById('playButton5');
+
+	const audio1 = document.getElementById('audio1');
+	const audio2 = document.getElementById('audio2');
+	const audio3 = document.getElementById('audio3');
+	const audio4 = document.getElementById('audio4');
+	const audio5 = document.getElementById('audio5');
+
+	// 모든 이미지 필터를 업데이트하는 함수
+	function updateAllImageFilters(isPlaying) {
+		const images = document.querySelectorAll('.container img');
+		const filterValue = isPlaying ? "grayscale(0%) brightness(100%)" : "grayscale(100%) brightness(50%)";
+		images.forEach(img => {
+			if (img !== playButton5) { // h1을 제외한 이미지 필터만 변경
+				img.style.filter = filterValue;
+			}
+		});
+	}
+
+	function toggleAudio(audioElement, audioId, playButton) {
+		if (isPlaying[audioId]) {
+			audioElement.pause();
+			isPlaying[audioId] = false;
+			if (playButton !== playButton5) {
+				playButton.style.filter = "grayscale(100%) brightness(50%)";
+			}
+		} else {
+			// 모든 오디오를 멈추기
+			audio1.pause();
+			audio2.pause();
+			audio3.pause();
+			audio4.pause();
+			audio5.pause();
+
+			isPlaying['audio1'] = false;
+			isPlaying['audio2'] = false;
+			isPlaying['audio3'] = false;
+			isPlaying['audio4'] = false;
+			isPlaying['audio5'] = false;
+
+			// 선택된 오디오만 재생
+			audioElement.play();
+			isPlaying[audioId] = true;
+			if (playButton !== playButton5) {
+				playButton.style.filter = "grayscale(0%) brightness(100%)";
+			}
+		}
+	}
+
+	// <h1> 클릭 시 모든 이미지 필터 업데이트
+	function toggleH1Audio() {
+		if (isPlaying['audio5']) {
+			audio5.pause();
+			isPlaying['audio5'] = false;
+			updateAllImageFilters(false);
+		} else {
+			// 모든 오디오를 멈추기
+			audio1.pause();
+			audio2.pause();
+			audio3.pause();
+			audio4.pause();
+			audio5.play();
+
+			isPlaying['audio1'] = false;
+			isPlaying['audio2'] = false;
+			isPlaying['audio3'] = false;
+			isPlaying['audio4'] = false;
+			isPlaying['audio5'] = true;
+
+			updateAllImageFilters(true);
+		}
+	}
+
+	// 각 이미지 클릭 이벤트 추가
+	playButton1.onclick = function() {
+		toggleAudio(audio1, 'audio1', playButton1);
+	};
+
+	playButton2.onclick = function() {
+		toggleAudio(audio2, 'audio2', playButton2);
+	};
+
+	playButton3.onclick = function() {
+		toggleAudio(audio3, 'audio3', playButton3);
+	};
+
+	playButton4.onclick = function() {
+		toggleAudio(audio4, 'audio4', playButton4);
+	};
+
+	playButton5.onclick = function() {
+		toggleH1Audio();
+	};
+</script>
+
+
+</body>
+</html>
